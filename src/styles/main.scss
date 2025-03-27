@@ -2,6 +2,10 @@
 @use 'hero';
 @use 'shows';
 @use 'plans';
+@use 'available-devices';
+@use 'faq';
+@use 'footer';
+@use 'header';
 
 @font-face {
     font-family: Avenir;
@@ -21,6 +25,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Avenir, sans-serif;
+    list-style: none;
 }
 
 body {
@@ -80,4 +85,102 @@ button {
     margin-top: 2vw;
     margin-bottom: 8px;
     cursor: pointer;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corBotaoAssine;
+
+    :hover {
+        background-color: lighten($color: variaveis.$corBotaoAssine, $amount: 7%);
+    }
+}
+
+.button_2 {
+    display: block;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    color: variaveis.$corTextoSecundario;
+    background-color: variaveis.$corBotaoAssine;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 2vw;
+    margin-bottom: 8px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corBotaoAssine;
+
+    &:hover {
+        background-color: lighten($color: variaveis.$corBotaoAssine, $amount: 7%);
+    }
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    color: variaveis.$corTextoSecundario;
+    background-color: variaveis.$corBotaoSecundario;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid;
+    border-color: variaveis.$corBotaoSecundario;
+
+    &:hover {
+        background-color: lighten($color: variaveis.$corBotaoSecundario, $amount: 7%);
+    }
+
+    &--dark {
+        background-color: rgba(variaveis.$corBotaoDark, 0.8);
+        border-color: variaveis.$corTextoSecundario;
+
+        &:hover {
+            background-color: variaveis.$corDeFundo;
+        }
+    }
+}
+
+.image-text-section {
+    padding: 5.6vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    img {
+        max-width: 100%;
+    }
+
+    &__text_container {
+        padding: 0 2vw;
+
+        h2 {
+            margin-bottom: 24px;        
+        }
+    }
+
+    &--image-full-width {
+        display: block;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        &__text_container {
+            position: absolute;
+            top: 0vw;
+            left: 50%;
+            height: 100%;
+            width: calc(50% - 5.6vw);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+    }
 }
