@@ -14,10 +14,10 @@
             </h1>
             <ul class="header__links">
                 <li class="header__links__item  ">
-                    <a href="#" class="button">Assine agora</a>
+                    <a href="#" class="button-header">Assine agora</a>
                 </li>
                 <li class="header__links__item">
-                    <a href="#" class="button button--dark">Entrar</a>
+                    <a href="#" class="button-header button-header--dark">Entrar</a>
                 </li>
             </ul>
         </div>
@@ -40,12 +40,12 @@
             <ul class="hero__content__combos">
                 <li class="hero__content__combos__combo">
                     <img src="./dist/imagens/logos/disney_star_plus.png" alt=" Disney+ - Star+ - Combo+">
-                    <button class="button">Assine Agora</button>
+                    <button class="button_2">Assine Agora</button>
                     <span class="text">R$45,90/mês*</span>
                 </li>
                 <li class="hero__content__combos__combo">
                     <img src="./dist/imagens/logos/disney_star_plus_starzplay.png" alt=" Disney+ - Star+ - Combo+">
-                    <button class="button">Assine Agora</button>
+                    <button class="button_2">Assine Agora</button>
                     <span class="text">R$45,90/mês*</span>
                 </li>
             </ul>
@@ -169,7 +169,10 @@
         </div>
     </section>
     <section class="image-text-section image-text-section--image-full-width">
-        <img src="./dist/imagens/fundo_rei_leao.png" alt="O Rei leão">
+        <picture>
+            <source media="(max-width: 768px)" srcset="dist/imagens/fundo_rei_leao_celular.png">
+            <img src="./dist/imagens/fundo_rei_leao.png" alt="O Rei leão">
+        </picture>
         <div class="image-text-section__text_container image-text-section--image-full-width__text_container">
             <h2 class="title">Baixe filmes e séries</h2>
             <p class="text--big">
